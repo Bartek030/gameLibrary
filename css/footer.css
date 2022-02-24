@@ -1,0 +1,9 @@
+.locate_footer {
+    min-height: calc(100vh - 40px);
+}
+
+.app_footer {
+    background-color: aqua;
+    color: white;
+    min-height: 40px;
+}
