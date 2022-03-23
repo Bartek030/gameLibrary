@@ -1,6 +1,7 @@
 @import "header.css";
 @import "nav.css";
 @import "footer.css";
+@import "memoryGame.css";
 
 * {
     margin: 0;

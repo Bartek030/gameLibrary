@@ -19,15 +19,11 @@
             templateUrl: 'src/templates/home.html'
         })
 
-        .state('tab1', {
-            url: '/tab1',
-            templateUrl: 'src/tab1.html'
+        .state('memoryGame', {
+            url: '/memoryGame',
+            templateUrl: 'src/templates/memoryGame.html',
+            controller: 'MemoryGameController as memory'
         })
-
-        .state('tab2', {
-            url: '/tab2',
-            templateUrl: 'src/tab2.html'
-        });
     }
 
 })();
