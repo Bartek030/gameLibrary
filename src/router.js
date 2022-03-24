@@ -23,7 +23,7 @@
             url: '/memoryGame',
             templateUrl: 'src/templates/memoryGame.html',
             controller: 'MemoryGameController as memory'
-        })
+        });
     }
 
 })();
