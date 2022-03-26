@@ -1,6 +1,7 @@
 @import "header.css";
 @import "nav.css";
 @import "footer.css";
+@import "memoryGame.css";
 
 * {
     margin: 0;
@@ -9,13 +10,4 @@
 
 body {
     background-image: url("/resources/img/footer_lodyas.png");
-}
-
-.app_mainBox {
-    border: 3px solid white;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
 }
