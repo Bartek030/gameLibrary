@@ -1,0 +1,11 @@
+main {
+    flex: 1;
+    padding: 2rem;
+    color: #dddddd;
+    display: flex;
+    flex-direction: column;
+}
+
+main h2 {
+    margin-bottom: 1rem;
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl" ng-app="SimpleGames">
+<html lang="pl" ng-app="BaseApp">
     
     <head>
 
@@ -18,66 +18,72 @@
 
 
         <!-- Stylesheets -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="css/style.css">
 
     </head>
     
     <body>
-
-        <div class="container-fluid m-0 p-0 mx-auto">
-            <div class="locate_footer">
-                <header class="d-flex justify-content-center">
-                    <img class="pb-3 mx-2" src="/resources/img/pad.png">
-                    <h1 class="app_h1">Biblioteka Gier</h1>
-                </header>
-
-                <div class="m-0 p-0 row">
-                    <ul class="nav nav-pills nav-fill app_navigation">
-                        <li class="nav-item" ui-sref="memoryGame">
-                            Gra w pamięć
-                        </li>
-                        <li class="nav-item">
-                            Szubienica
-                        </li>
-                    </ul>
-
-                    <ui-view></ui-view>
-                </div>
+            
+        <nav ng-controller="BaseAppController as baseApp">
+            <div class="sidebar-top">
+                <span class="shrink-button" ng-click="baseApp.clickShrinkButton()">
+                    <i class='bx bx-chevron-left'></i>
+                </span>
+                <img class="logo" src="/resources/img/pad.png" alt="logo">
+                <h3 class="hide">TEST</h3>
             </div>
 
-            <footer class="d-flex justify-content-center m-0 p-0 app_footer">
-                <div class="mx-3">2021 &copy;</div>
+            <div class="sidebar-links">
+                <ul>
+                    <div class="active-tab"></div>
+                    <navigation-item-list items="baseApp.navItems" on-click-action="baseApp.changeActiveTab()" on-hover-action="baseApp.showTooltip()"></navigation-item-list>
+                    <div class="tooltip">
+                        <span class="show">asdfasdf</span>
+                    </div>
+                </ul>
+            </div>
+
+        </nav>
+
+        <main>
+            <ui-view></ui-view>
+            <footer>
+                <div>2021 &copy;</div>
     
-                <div class="mx-3">Autor:&ensp;Bartłomiej Święs</div>
+                <div>Autor:&ensp;Bartłomiej Święs</div>
     
-                <div class="mx-3">Kontakt:&ensp;bartlomiejswies@gmail.com</div>
+                <div>Kontakt:&ensp;bartlomiejswies@gmail.com</div>
     
-                <div class="mx-3 contact">
-                    <i class="far fa-envelope fs-2 chatButton" title="Skontaktuj się ze mną"></i>
+                <div">
+                    <i class="far fa-envelope chatButton" title="Skontaktuj się ze mną"></i>
                 </div>
     
-                <div class="mx-3">
-                    <a href="https://www.linkedin.com/in/bart%C5%82omiej-%C5%9Bwi%C4%99s/"><i class="fab fa-linkedin fs-2"></i></a>
+                <div">
+                    <a href="https://www.linkedin.com/in/bart%C5%82omiej-%C5%9Bwi%C4%99s/"><i class="fab fa-linkedin"></i></a>
                 </div>
             </footer>
+        </main>
 
-        </div>
-
-        <!-- JS Scripts Bootstrap and JQuery -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- JS Scripts JQuery and for styles -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
         <!-- AngularJS lib -->
         <script src="/lib/angular.min.js"></script>
         <script src="/lib/angular-ui-router.min.js"></script>
 
-        <!-- Main module and router -->
-        <script src="/src/simpleGames.js"></script>
+        <!-- Modules and Router -->
+        <script src="/src/BaseApp.js"></script>
         <script src="/src/memoryGame/memoryGame.module.js"></script>
         <script src="/src/router.js"></script>
 
+        <!-- Base App components -->
+        <script src="/src/baseApp.controller.js"></script>
+        <script src="/src/baseApp.service.js"></script>
+        <script src="/src/baseApp.component.js"></script>
+
         <!-- Memory game components -->
+        <script src="/src/memoryGame/memoryGame.module.js"></script>
         <script src="/src/memoryGame/memoryGame.controller.js"></script>
         <script src="/src/memoryGame/memoryGame.service.js"></script>
 

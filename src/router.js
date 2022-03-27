@@ -1,9 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('SimpleGames', ['ui.router', 'MemoryGame']);
-
-    angular.module('SimpleGames')
+    angular.module('BaseApp')
         .config(RouterConfig);
 
     RouterConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
@@ -16,12 +14,12 @@
 
         .state('home', {
             url: '/home',
-            templateUrl: 'src/templates/home.html'
+            templateUrl: 'src/home/home.html'
         })
 
         .state('memoryGame', {
             url: '/memoryGame',
-            templateUrl: 'src/templates/memoryGame.html',
+            templateUrl: 'src/memoryGame/memoryGame.html',
             controller: 'MemoryGameController as memory'
         });
     }
