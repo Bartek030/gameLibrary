@@ -2,7 +2,7 @@
 @import "nav.css";
 @import "mainBox.css";
 @import "footer.css";
-@import "memoryGame.css";
+@import "/src/memoryGame/memoryGame.css";
 
 *, *::before, *::after {
     margin: 0;
@@ -11,9 +11,9 @@
 }
 
 :root {
-    --main-color: #1cc41c;
-    --main-color-dark: #0bb30b;
-    --main-color-light: #2dd52d;
+    --main-color: #36b03c;
+    --main-color-dark: #25a02b;
+    --main-color-light: #47c14d;
     --text-color: #c2c2c2;
 }
 

@@ -26,10 +26,11 @@ nav::before {
     position: relative;
     display: flex;
     align-items: center;
+    padding-bottom: 30px;
 }
 
 .sidebar-top .logo {
-    width: 2.1rem;
+    width: 3rem;
     margin: 0 0.8rem;
 }
 
@@ -41,13 +42,13 @@ nav::before {
 
 .shrink-button {
     position: absolute;
-    top: 50%;
+    top: 20%;
     height: 27px;
     padding: 0 0.3rem;
     background-color: var(--main-color);
     border-radius: 6px;
     cursor: pointer;
-    right: -2.65rem;
+    right: -3rem;
     opacity: 0;
     pointer-events: none;
     transform: translateY(-50%) translateX(-8px);
