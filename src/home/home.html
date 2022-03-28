@@ -1,6 +1,15 @@
-<h2>STRONA DOMOWA</h2>
-<p>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+<h2 class="home-h2">SIMPLE APPLICATIONS</h2>
+<p class="home-p">
+    Simple Applications to kilka mniejszych projektów, zawartych w ramach jednej aplikacji internetowej. Poszczególne aplikacje zostały stworzone niezależnie od siebie - każdy z nich może stanowić osobny projekt. Strona Simple Applications została stworzona w oparciu o model MVC. Logika zbudowana została w oparciu o bibliotekę AngularJS (v1.8.2) a wygląd z wykorzystaniem JQuery (v3.6.0). 
 </p>
+<p class="home-p">
+    Aby rozpocząć przeglądanie aplikacji wybierz jeden z projektów za pomocą poniższych kafelków lub skorzystaj z nawigacji po lewej stronie.
+</p>
+<div class="block-items">
+    <div class="single-block" ng-repeat="item in home.items" ng-if="$index > 0">
+        <a ui-sref="{{ item.state }}">
+            <i class='{{ item.imageNameOne }}'></i>
+            <h3 class="home-h3">{{ item.title }}</h3>
+        </a>
+    </div>
+</div>

@@ -14,7 +14,8 @@
 
         .state('home', {
             url: '/home',
-            templateUrl: 'src/home/home.html'
+            templateUrl: 'src/home/home.html',
+            controller: 'HomeController as home'
         })
 
         .state('memoryGame', {

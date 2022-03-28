@@ -2,6 +2,7 @@
 @import "nav.css";
 @import "mainBox.css";
 @import "footer.css";
+@import "/src/home/home.css";
 @import "/src/memoryGame/memoryGame.css";
 
 *, *::before, *::after {

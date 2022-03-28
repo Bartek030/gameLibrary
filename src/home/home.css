@@ -1,0 +1,68 @@
+.home-h2 {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 3rem;
+}
+
+.home-p {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-align: justify;
+    padding-bottom: 2rem;
+}
+
+.block-items {
+    display: flex;
+    justify-content: center;
+}
+
+.single-block {
+    text-align: center;
+    width: 15rem;
+    height: 15rem;
+    border: 4px solid var(--text-color);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.single-block:hover {
+    background-color: #464646;
+    border-color: #fff;
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+.single-block a {
+    color: var(--text-color);
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.single-block a:hover {
+    color: #fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.single-block a i {
+    font-size: 8rem;
+    padding-top: 20px;
+}
+
+.single-block a h3 {
+    font-size: 1.5rem;
+    padding-top: 20px;
+}
