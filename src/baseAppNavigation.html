@@ -1,0 +1,12 @@
+<li class="tooltip-element" ng-repeat="item in $ctrl.items">
+    <a ui-sref="{{ item.state }}" data-active="{{ $index }}" ng-click="$ctrl.onClickAction()" ng-mouseover="$ctrl.onHoverAction()">
+        <div class="icon">
+            <i class='{{ item.imageNameOne }}'></i>
+            <i class='{{ item.imageNameTwo }}'></i>
+        </div>
+        <span id="navItem{{ $index }}" class="link hide">{{ item.title }}</span>
+    </a>
+</li>
+<div class="tooltip">
+    <span class="show"></span>
+</div>

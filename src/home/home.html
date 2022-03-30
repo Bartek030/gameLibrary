@@ -1,0 +1,15 @@
+<h2 class="home-h2">SIMPLE APPLICATIONS</h2>
+<p class="home-p">
+    Simple Applications to kilka mniejszych projektów, zawartych w ramach jednej aplikacji internetowej. Poszczególne aplikacje zostały stworzone niezależnie od siebie - każdy z nich może stanowić osobny projekt. Strona Simple Applications została stworzona w oparciu o model MVC. Logika zbudowana została w oparciu o bibliotekę AngularJS (v1.8.2) a wygląd z wykorzystaniem JQuery (v3.6.0). 
+</p>
+<p class="home-p">
+    Aby rozpocząć przeglądanie aplikacji wybierz jeden z projektów za pomocą poniższych kafelków lub skorzystaj z nawigacji po lewej stronie.
+</p>
+<div class="block-items">
+    <div class="single-block" ng-repeat="item in home.items" ng-if="$index > 0">
+        <a ui-sref="{{ item.state }}">
+            <i class='{{ item.imageNameOne }}'></i>
+            <h3 class="home-h3">{{ item.title }}</h3>
+        </a>
+    </div>
+</div>

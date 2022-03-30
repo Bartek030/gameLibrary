@@ -1,13 +1,28 @@
-@import "header.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 @import "nav.css";
+@import "mainBox.css";
 @import "footer.css";
-@import "memoryGame.css";
+@import "/src/home/home.css";
+@import "/src/memoryGame/memoryGame.css";
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #36b03c;
+    --main-color-dark: #25a02b;
+    --main-color-light: #47c14d;
+    --text-color: #c2c2c2;
 }
 
 body {
     background-image: url("/resources/img/footer_lodyas.png");
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    position: relative;
 }
