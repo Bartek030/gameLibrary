@@ -2,6 +2,7 @@
     text-align: center;
     letter-spacing: 2px;
     font-size: 3rem;
+    font-family: 'Rock 3D', cursive;
 }
 
 .home-p {
@@ -9,6 +10,7 @@
     letter-spacing: 1px;
     text-align: justify;
     padding-bottom: 2rem;
+    text-indent: 30px;
 }
 
 .block-items {
