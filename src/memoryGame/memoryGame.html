@@ -1,10 +1,10 @@
+<h2 class="memoryGame-h2">Gwent Memory Game</h2>
+<h3 class="memoryGame-h3">Inspired by <a href="https://www.playgwent.com/pl" target="_blank"> Gwent - The Witcher Card Game</a></h3>
 <div class="board">
-    <h2>Gwent Memory</h2>
-    <button ng-click="memory.startNewGame()" ng-if="memory.isCardListEmpty">Rozpocznij grę</button>
+    <p ng-if="memory.isCardListEmpty">Znajdź dwie identyczne karty aby usunąć je z planszy. Odkryj wszystkie pary aby wygrać!</p>
+    <button ng-click="memory.startNewGame()" ng-if="memory.isCardListEmpty">Rozpocznij nową grę</button>
     <div ng-if="memory.cardList">
         <div class="card" id="c{{$index}}" ng-repeat="card in memory.cardList track by $index" ng-click="memory.revealCard($index)"></div>
-        <div class="score">Turn counter: 0</div>
+        <div class="score" ng-if="!memory.isCardListEmpty">Turn counter: 0</div>
     </div>
-    
-    <p>Inspired by <a href="https://www.playgwent.com/pl" target="_blank"> Gwent - The Witcher Card Game</a></p>
 </div>

@@ -1,15 +1,49 @@
-.board > a:link    { color: #209781; text-decoration: none; }
-.board > a:visited { color: #209781; }
-.board > a:active  { color: #209781; }
-.board > a:hover   { color: #E9B64A; }
+.board {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
 
-.board > h2 {
-	font-size: 32px;
+.memoryGame-h2 {
+	font-size: 48px;
 	font-weight: 400;
 	text-align: center;
 	letter-spacing: 5px;
 	margin-top: 20px;
 	margin-bottom: 0;
+	font-family: 'Arapey', serif;
+	font-weight: 700;
+}
+
+.memoryGame-h3 {
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 25px;
+	letter-spacing: 2px;
+}
+
+.memoryGame-h3 > a {
+	color: var(--main-color);
+	text-decoration: none;
+}
+
+.memoryGame-h3 > a:link {
+	color: var(--main-color);
+	text-decoration: none;
+}
+
+.memoryGame-h3 > a:visited {
+	color: var(--main-color);
+}
+
+.memoryGame-h3 > a:active {
+	color: var(--main-color);
+}
+
+.memoryGame-h3 > a:hover {
+	color: #E9B64A;
+	text-decoration: none;
 }
 
 .board > p {
@@ -19,11 +53,27 @@
 	letter-spacing: 2px;
 }
 
-.board {
-	width: 600px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
+.board > button {
+	margin-top: 20px;
+	background-color: #209781;
+	border: 1px solid var(--main-color);
+	width: 300px;
+	height: 50px;
+	color: inherit;
+	font-size: 1.2rem;
+	letter-spacing: 1px;
+	box-shadow: 0 3px 10px -3px rgba(70, 46, 118, 0.3);
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+
+.board > button:hover {
+	background-color: var(--main-color-light);
+	cursor: pointer;
+	
 }
 
 .card {
