@@ -22,6 +22,7 @@
     text-align: center;
     width: 15rem;
     height: 15rem;
+    margin: 10px;
     border: 4px solid var(--text-color);
     border-radius: 20px;
     -webkit-border-radius: 20px;
