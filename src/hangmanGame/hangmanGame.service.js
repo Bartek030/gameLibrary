@@ -11,24 +11,24 @@
         var no = new Audio("/resources/sounds/hangmanGame/no.wav");
 
         var LETTERS = ["A", "Ą", "B", "C", "Ć", "D", "E", "Ę", "F", "G", "H", "I", "J", "K", "L", "Ł", "M", "N", "Ń", "O", "Ó", "P", "Q", "R", "S", "Ś", "T", "U", "V", "W", "X", "Y", "Z", "Ż", "Ź"];
-        var LETTERS_AS_OBJECT = {
-            partOne: ["A", "Ą", "B", "C", "Ć", "D", "E"],
-            partTwo: ["Ę", "F", "G", "H", "I", "J", "K"],
-            partThree: ["L", "Ł", "M", "N", "Ń", "O", "Ó"],
-            partFour: ["P", "Q", "R", "S", "Ś", "T", "U"],
-            partFive: ["V", "W", "X", "Y", "Z", "Ż", "Ź"]
-        };
-        service.getLetters = function() {
-            return LETTERS_AS_OBJECT;
-        };
- 
+        
         var phrase = "";
         var phraseTemplate = "";
         var phraseLength;
         var incorrectLetterNumber = 0;
+        var isGameStarted = false;
+
         service.getIncorrectLetterNumber = function() {
             return incorrectLetterNumber;
         };
+
+        service.getLetters = function() {
+            return LETTERS;
+        };
+ 
+        service.getIsGameStarted = function() {
+            return isGameStarted;
+        }
 
         service.startGame = function() {
             // TODO: pobranie z bazy nowego hasła @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -43,6 +43,7 @@
                     phraseTemplate = phraseTemplate + "_";
                 }
             }
+            isGameStarted = true;
             writePhrase();
         };
 
@@ -76,15 +77,17 @@
         
             if(phrase == phraseTemplate) {
                 $("#alphabet").html("Tak jest! Podano prawidłowe hasło: " + phrase + '<br /><br /><span class="reset" onclick="location.reload()">JESZCZE RAZ?</span>');
+                isGameStarted = false;
             }
         
             if(incorrectLetterNumber >= 9) {
                 $("#alphabet").html("Przegrana! Prawidłowe hasło: " + phrase + '<br /><br /><span class="reset" onclick="location.reload()">JESZCZE RAZ?</span>');
+                isGameStarted = false;
             }
         };
 
         function writePhrase() {
-            $("#hangman-box").html(phraseTemplate);
+            $("#hangmanGame-box").html(phraseTemplate);
         };
 
         String.prototype.setChar = function(place, char) {

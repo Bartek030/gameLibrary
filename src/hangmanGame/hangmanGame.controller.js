@@ -10,9 +10,11 @@
 
         hangman.letters = HangmanGameService.getLetters();
         hangman.incorrectLetterNumber = HangmanGameService.getIncorrectLetterNumber();
+        hangman.isGameStarted = HangmanGameService.getIsGameStarted();
 
         hangman.startGame = function() {
             HangmanGameService.startGame();
+            hangman.isGameStarted = HangmanGameService.getIsGameStarted();
         };
 
         hangman.check = function(index) {
