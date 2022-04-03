@@ -73,7 +73,14 @@
 .board > button:hover {
 	background-color: var(--main-color-light);
 	cursor: pointer;
-	
+}
+
+.board > button:active {
+	transform: translateY(1px);
+	-webkit-transform: translateY(1px);
+	-moz-transform: translateY(1px);
+	-ms-transform: translateY(1px);
+	-o-transform: translateY(1px);
 }
 
 .card {

@@ -1,0 +1,123 @@
+.hangmanGame-h2 {
+	font-size: 48px;
+	font-weight: 400;
+	text-align: center;
+	letter-spacing: 5px;
+	margin-top: 20px;
+	margin-bottom: 0;
+	font-family: 'Arapey', serif;
+	font-weight: 700;
+}
+
+.hangmanGame-p {
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 25px;
+	letter-spacing: 2px;
+}
+
+.hangmanGame-button {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+	background-color: #209781;
+	border: 1px solid var(--main-color);
+	width: 300px;
+	height: 50px;
+	color: inherit;
+	font-size: 1.2rem;
+	letter-spacing: 1px;
+	box-shadow: 0 3px 10px -3px rgba(70, 46, 118, 0.3);
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+
+.hangmanGame-button:hover {
+	background-color: var(--main-color-light);
+	cursor: pointer;
+}
+
+.hangmanGame-button:active {
+	transform: translateY(1px);
+	-webkit-transform: translateY(1px);
+	-moz-transform: translateY(1px);
+	-ms-transform: translateY(1px);
+	-o-transform: translateY(1px);
+}
+
+#hangmanGame-container {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 28px;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 700;
+    text-align: center;
+}
+
+#hangmanGame-box {
+    width: 900px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 48px;
+    min-height: 60px;
+    letter-spacing: 5px;
+}
+
+#gibbet {
+    float: left;
+    width: 430px;
+    text-align: center;
+    min-height: 280px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+#alphabet {
+    float: left;
+    width: 430px;
+    text-align: center;
+    min-height: 280px;
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+.letter {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    border: 3px solid gray;
+    float: left;
+    cursor: pointer;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.letter:hover {
+    background-color: #222222;
+    color: white;
+    border: 3px solid white;
+}
+
+.hangman-clear {
+    clear: both;
+}
+
+.reset {
+    color: green;
+    cursor: pointer;
+    font-size: 48px;
+}
+
+.reset:hover {
+    color: white;
+}

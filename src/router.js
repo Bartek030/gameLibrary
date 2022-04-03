@@ -22,6 +22,12 @@
             url: '/memoryGame',
             templateUrl: 'src/memoryGame/memoryGame.html',
             controller: 'MemoryGameController as memory'
+        })
+
+        .state('hangmanGame', {
+            url: '/hangmanGame',
+            templateUrl: 'src/hangmanGame/hangmanGame.html',
+            controller: 'HangmanGameController as hangman'
         });
     }
 

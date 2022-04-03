@@ -21,6 +21,12 @@
                 imageNameOne: "bx bx-brain",
                 imageNameTwo: "bx bxs-brain",
                 title: "Gra w pamięć"
+            },
+            {
+                state: "hangmanGame",
+                imageNameOne: "bx bx-face",
+                imageNameTwo: "bx bxs-face",
+                title: "Szubienica"
             }
         ];
 
