@@ -2,9 +2,9 @@
 @import "nav.css";
 @import "mainBox.css";
 @import "footer.css";
-@import "/src/home/home.css";
-@import "/src/memoryGame/memoryGame.css";
-@import "/src/hangmanGame/hangmanGame.css";
+@import "src/home/home.css";
+@import "src/memoryGame/memoryGame.css";
+@import "src/hangmanGame/hangmanGame.css";
 
 *, *::before, *::after {
     margin: 0;
