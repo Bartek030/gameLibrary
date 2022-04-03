@@ -45,7 +45,7 @@
 
             if (opacityValue != 0 && lock == false) {
                 lock = true;
-                var image = "url(/resources/img/memoryGame/" + cardList[number] + ")";
+                var image = "url(resources/img/memoryGame/" + cardList[number] + ")";
 
                 $('#c' + number).css('background-image', image);
                 $('#c' + number).addClass('cardA');
@@ -87,11 +87,11 @@
         }
 
         function restoreTwoCards(number1, number2) {
-            $('#c' + number1).css('background-image', 'url(/resources/img/memoryGame/karta.png)');
+            $('#c' + number1).css('background-image', 'url(resources/img/memoryGame/karta.png)');
             $('#c' + number1).addClass('card');
             $('#c' + number1).removeClass('cardA');
 
-            $('#c' + number2).css('background-image', 'url(/resources/img/memoryGame/karta.png)');
+            $('#c' + number2).css('background-image', 'url(resources/img/memoryGame/karta.png)');
             $('#c' + number2).addClass('card');
             $('#c' + number2).removeClass('cardA');
             lock = false;

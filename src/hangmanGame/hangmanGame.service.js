@@ -7,8 +7,8 @@
     HangmanGameService.$inject = ['$timeout']
     function HangmanGameService($timeout) {
         var service = this;
-        var yes = new Audio("/resources/sounds/hangmanGame/yes.wav");
-        var no = new Audio("/resources/sounds/hangmanGame/no.wav");
+        var yes = new Audio("resources/sounds/hangmanGame/yes.wav");
+        var no = new Audio("resources/sounds/hangmanGame/no.wav");
 
         var LETTERS = ["A", "Ą", "B", "C", "Ć", "D", "E", "Ę", "F", "G", "H", "I", "J", "K", "L", "Ł", "M", "N", "Ń", "O", "Ó", "P", "Q", "R", "S", "Ś", "T", "U", "V", "W", "X", "Y", "Z", "Ż", "Ź"];
         
