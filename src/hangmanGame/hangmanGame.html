@@ -1,9 +1,32 @@
 <h2 class="hangman-h2">Wisielec</h2>
+<p ng-if="true">Spróbuj odgadnąć hasło. Wybierz jedną z liter. Jeśli trafisz w literę, która znajduje się w haśle, zostanie ona wyświetlona. Jeśli nie - trafisz na szubienice &#128128;</p>
 <div id="hangman-container">
     <div id="hangman-box"></div>
     <div id="gibbet">
-        <img src="resources/img/hangmanGame/s0.jpg"/>
+        <img src="resources/img/hangmanGame/s{{ hangman.incorrectLetterNumber }}.jpg"/>
     </div>
-    <div id="alphabet"></div>
-    <div style="clear: both;"></div>
+    <div id="alphabet">
+        <div class="letter" ng-repeat="let in hangman.letters.partOne" ng-click="hangman.check($index)" id="let{{$index}}">
+            {{ let }}
+        </div>
+        <div class="hangman-clear"></div>
+        <div class="letter" ng-repeat="let in hangman.letters.partTwo" ng-click="hangman.check($index + 7)" id="let{{$index + 7}}">
+            {{ let }}
+        </div>
+        <div class="hangman-clear"></div>
+        <div class="letter" ng-repeat="let in hangman.letters.partThree" ng-click="hangman.check($index + 14)" id="let{{$index + 14}}">
+            {{ let }}
+        </div>
+        <div class="hangman-clear"></div>
+        <div class="letter" ng-repeat="let in hangman.letters.partFour" ng-click="hangman.check($index + 21)" id="let{{$index + 21}}">
+            {{ let }}
+        </div>
+        <div class="hangman-clear"></div>
+        <div class="letter" ng-repeat="let in hangman.letters.partFive" ng-click="hangman.check($index + 28)" id="let{{$index + 28}}">
+            {{ let }}
+        </div>
+        <div class="hangman-clear"></div>
+    </div>
+    <div class="hangman-clear"></div>
+    <button ng-click="hangman.startGame()">aaa</button>
 </div>
