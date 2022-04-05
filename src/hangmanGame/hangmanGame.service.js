@@ -11,6 +11,19 @@
         var no = new Audio("resources/sounds/hangmanGame/no.wav");
 
         var LETTERS = ["A", "Ą", "B", "C", "Ć", "D", "E", "Ę", "F", "G", "H", "I", "J", "K", "L", "Ł", "M", "N", "Ń", "O", "Ó", "P", "Q", "R", "S", "Ś", "T", "U", "V", "W", "X", "Y", "Z", "Ż", "Ź"];
+
+        var PHRASES_TO_PICK = [
+            "Bez pracy nie ma kołaczy",
+            "Darowanemu koniowi w zęby się nie zagląda",
+            "Fortuna kołem się toczy",
+            "Nie chwal dnia przed zachodem słońca",
+            "Lepszy wróbel w garści niż gołąb na dachu",
+            "Apetyt rośnie w miarę jedzenia",
+            "Co ma wisieć nie utonie",
+            "Dzieci i ryby głosu nie mają",
+            "Grosz do grosza a będzie kokosza",
+            "Łaska pańska na pstrym koniu jeździ"
+        ];
         
         var phrase = "";
         var phraseTemplate = "";
@@ -33,7 +46,7 @@
         service.startGame = function() {
             // TODO: pobranie z bazy nowego hasła @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
             incorrectLetterNumber = 0;
-            phrase = "Bez pracy nie ma kołaczy".toUpperCase();
+            phrase = pickPhrase();
             phraseLength = phrase.length;
 
             for (var i = 0; i < phraseLength; i++) {
@@ -89,6 +102,11 @@
         function writePhrase() {
             $("#hangmanGame-box").html(phraseTemplate);
         };
+
+        function pickPhrase() {
+            var randomNumber = Math.floor(Math.random() * PHRASES_TO_PICK.length);
+            return PHRASES_TO_PICK[randomNumber].toUpperCase();
+        }
 
         String.prototype.setChar = function(place, char) {
             if(place > this.length - 1) {
